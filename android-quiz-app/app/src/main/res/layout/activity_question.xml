@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/back"
+    android:orientation="vertical"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:gravity="center" >
+
+    <TextView
+        android:id="@+id/questionTxt"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:text="Sample Question ??"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:background="@drawable/rounded_button"
+        android:textColor="#FFFFFF"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:text="Option 1"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_marginTop="10dp"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:background="@drawable/rounded_button"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:text="Option 2"/>
+
+    <Button android:id="@+id/button3"
+        android:layout_marginTop="10dp"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:background="@drawable/rounded_button"
+        android:textColor="#FFFFFF"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:text="Option 3"/>
+
+    <Button android:id="@+id/button4"
+        android:layout_marginTop="10dp"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:background="@drawable/rounded_button"
+        android:textColor="#FFFFFF"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:text="Option 4"/>
+
+    <TextView
+        android:id="@+id/txtTimer"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:text="00:00"
+        android:textColor="#F7F4F4"
+        />
+
+</LinearLayout>
