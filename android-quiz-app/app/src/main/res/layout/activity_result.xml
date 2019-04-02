@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/resultpage"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".ResultActivity">
+
+
+        <TextView
+            android:id="@+id/txtTotalQuestions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="380dp"
+            android:layout_marginLeft="85dp"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:text="Total Questions" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="370dp"
+            android:layout_marginLeft="295dp"
+            android:textSize="30dp"
+            android:textColor="#000000"
+            android:text="1" />
+
+
+        <TextView
+            android:id="@+id/txtCorrectAnswers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="430dp"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:text="Correct Answers" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="420dp"
+            android:layout_marginLeft="295dp"
+            android:textSize="30dp"
+            android:textColor="#009688"
+            android:text="2" />
+
+
+        <TextView
+            android:id="@+id/txtIncorrectAnswers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="480dp"
+            android:layout_marginLeft="85dp"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:text="Incorrect Answers" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="470dp"
+            android:layout_marginLeft="295dp"
+            android:textSize="30dp"
+            android:textColor="#DB1111"
+            android:text="3" />
+
+</RelativeLayout>

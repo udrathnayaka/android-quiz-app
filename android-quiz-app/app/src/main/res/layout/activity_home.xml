@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="@drawable/finals2"
+    android:background="@drawable/homebackground"
     tools:context=".HomeActivity"
     android:id="@+id/drawerLayout">
 
@@ -17,7 +17,7 @@
         <TextView
             android:id="@+id/questionTxt"
             android:layout_width="match_parent"
-            android:layout_height="450dp"
+            android:layout_height="380dp"
             android:gravity="top"
             android:padding="10dp"
             android:textAlignment="center"
