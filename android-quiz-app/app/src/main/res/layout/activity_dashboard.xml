@@ -65,6 +65,7 @@
 
 
                 <ImageView
+                    android:id="@+id/imgAdmin"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_marginBottom="4dp"
@@ -73,9 +74,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" Administrator"
+                    android:text=" ADMINISTRATOR"
+                    android:typeface="normal"
                     android:textColor="#0E1843"
-                    android:textSize="17sp" />
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
@@ -88,6 +90,7 @@
 
 
                 <ImageView
+                    android:id="@+id/imgAboutUs"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_marginBottom="4dp"
@@ -96,9 +99,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" About us"
+                    android:text=" ABOUT US"
                     android:textColor="#0E1843"
-                    android:textSize="17sp" />
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
@@ -123,6 +126,7 @@
 
 
                 <ImageView
+                    android:id="@+id/imgInstructions"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_marginBottom="4dp"
@@ -131,9 +135,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="  Instructions    "
+                    android:text="    INSTRUCTIONS    "
                     android:textColor="#0E1843"
-                    android:textSize="17sp" />
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
@@ -146,7 +150,8 @@
 
 
                 <ImageView
-                    android:layout_width="70dp"
+                    android:id="@+id/imgExit"
+                    android:layout_width="60dp"
                     android:layout_height="70dp"
                     android:layout_marginBottom="4dp"
                     android:src="@drawable/exit" />
@@ -154,9 +159,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="   Exit   "
+                    android:text="   EXIT   "
                     android:textColor="#0E1843"
-                    android:textSize="17sp" />
+                    android:textSize="14sp" />
 
             </LinearLayout>
 

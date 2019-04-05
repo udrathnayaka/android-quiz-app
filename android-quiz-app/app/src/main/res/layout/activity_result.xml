@@ -13,22 +13,24 @@
         <TextView
             android:id="@+id/txtTotalQuestions"
             android:layout_width="wrap_content"
+            android:typeface="monospace"
             android:layout_height="wrap_content"
             android:layout_marginTop="380dp"
             android:layout_marginLeft="85dp"
-            android:textSize="20dp"
-            android:textColor="#000000"
-            android:text="Total Questions" />
+            android:textSize="17dp"
+            android:textColor="#FFFFFF"
+            android:text="TOTAL QUESTIONS" />
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="370dp"
-            android:layout_marginLeft="295dp"
-            android:textSize="30dp"
-            android:textColor="#000000"
-            android:text="1" />
+            android:layout_marginLeft="305dp"
+            android:layout_marginTop="375dp"
+            android:text="1"
+            android:textColor="#FFEB3B"
+            android:textSize="24dp"
+            android:typeface="monospace" />
 
 
         <TextView
@@ -37,19 +39,20 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="85dp"
             android:layout_marginTop="430dp"
-            android:textSize="20dp"
-            android:textColor="#000000"
-            android:text="Correct Answers" />
+            android:text="CORRECT ANSWERS"
+            android:textColor="#ffffff"
+            android:textSize="17dp" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="420dp"
-            android:layout_marginLeft="295dp"
-            android:textSize="30dp"
-            android:textColor="#009688"
-            android:text="2" />
+            android:layout_marginLeft="305dp"
+            android:layout_marginTop="425dp"
+            android:text="2"
+            android:textColor="#FFEB3B"
+            android:textSize="24dp"
+            android:typeface="monospace" />
 
 
         <TextView
@@ -58,18 +61,20 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="480dp"
             android:layout_marginLeft="85dp"
-            android:textSize="20dp"
-            android:textColor="#000000"
-            android:text="Incorrect Answers" />
+            android:textSize="17dp"
+            android:typeface="monospace"
+            android:textColor="#ffffff"
+            android:text="INCORRECT ANSWERS" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="470dp"
-            android:layout_marginLeft="295dp"
-            android:textSize="30dp"
-            android:textColor="#DB1111"
+            android:layout_marginTop="475dp"
+            android:layout_marginLeft="305dp"
+            android:textSize="24dp"
+            android:textColor="#FFEB3B"
+            android:typeface="monospace"
             android:text="3" />
 
 </RelativeLayout>
