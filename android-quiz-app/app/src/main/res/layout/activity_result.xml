@@ -4,10 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/resultpage"
+    android:background="@drawable/scorepage"
     android:orientation="vertical"
     android:layout_gravity="center"
     tools:context=".ResultActivity">
+
+        <ImageView
+            android:id="@+id/imgHome"
+            android:background="@drawable/home"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            />
 
 
         <TextView

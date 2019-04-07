@@ -1,10 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
+    android:background="@drawable/questionbackground"
     tools:context=".AdministratorActivity">
 
-</android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/admin"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="80dp"
+        />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/login_ui"
+        android:textColorHint="#9B8686"
+        android:layout_marginTop="210dp"
+        android:paddingLeft="20dp"
+        android:textSize="12dp"
+        android:hint="USERNAME"
+        />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:background="@drawable/login_ui"
+        android:layout_height="40dp"
+        android:paddingLeft="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/username"
+        android:layout_marginTop="10dp"
+        android:hint="PASSWORD"
+        android:textSize="12dp"
+        android:drawablePadding="10dp"
+        android:textColorHint="#9B8686"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/password"
+        android:text="SIGN IN"
+        android:textColor="#F8E9E9"
+       android:textSize="14dp"
+        android:textAllCaps="false"
+        android:background="@drawable/login_submit"
+        android:layout_marginTop="90dp"
+        />
+
+</RelativeLayout>
