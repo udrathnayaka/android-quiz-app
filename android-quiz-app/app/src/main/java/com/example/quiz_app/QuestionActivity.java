@@ -29,7 +29,7 @@ public class QuestionActivity extends AppCompatActivity {
     int total=0;
     int correct =0;
     int wrong=0;
-    DatabaseReference reference;
+    DatabaseReference ref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +61,8 @@ public class QuestionActivity extends AppCompatActivity {
 
         }
         else {
-            reference= FirebaseDatabase.getInstance().getReference().child("quiz").child(String.valueOf(total));
-            reference.addValueEventListener(new ValueEventListener() {
+            ref= FirebaseDatabase.getInstance().getReference().child("questions").child(String.valueOf(total));
+            ref.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                    final Question question =dataSnapshot.getValue(Question.class);
