@@ -18,14 +18,12 @@ public class HomeActivity extends AppCompatActivity {
     Button buttonInstructions;
     Button buttonDashboard;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home);
-
 
         buttonStartQuiz = findViewById(R.id.btnStartQuiz);
         buttonInstructions = findViewById(R.id.btnStartInstructions);
@@ -36,8 +34,8 @@ public class HomeActivity extends AppCompatActivity {
           public void onClick(View v) {
               Intent i = new Intent(getApplicationContext(),QuestionActivity.class);
               startActivity(i);
-          }
-      });
+            }
+        });
 
         buttonInstructions.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,5 +53,4 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
     }
-
 }

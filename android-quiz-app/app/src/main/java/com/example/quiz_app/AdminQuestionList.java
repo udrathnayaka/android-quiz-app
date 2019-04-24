@@ -21,10 +21,7 @@ public class AdminQuestionList extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_admin_question_list);
 
-
-
         listView=(ListView) findViewById(R.id.listview);
-
         final ArrayList<String> arrayList =new ArrayList<>();
 
         arrayList.add("Question 01");
@@ -58,8 +55,6 @@ public class AdminQuestionList extends AppCompatActivity {
                 Toast.makeText(AdminQuestionList.this,"Clicked Item:"+1+""+arrayList.get(i).toString(),Toast.LENGTH_SHORT).show();
             }
         });
-
         }
-
     }
 

@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -22,6 +23,10 @@ import com.google.firebase.database.ValueEventListener;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
+
 public class QuestionActivity extends AppCompatActivity {
 
     Button b1,b2,b3,b4;
@@ -29,7 +34,9 @@ public class QuestionActivity extends AppCompatActivity {
     int total=0;
     int correct =0;
     int wrong=0;
-    DatabaseReference ref;
+    DatabaseReference ref1,ref;
+    int a;
+    ArrayList<Integer> arrayList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,23 +52,39 @@ public class QuestionActivity extends AppCompatActivity {
         t1_question = (TextView) findViewById(R.id.questionTxt);
         timerTxt = (TextView) findViewById(R.id.txtTimer);
 
-        updateQuestion();
+        ref1 = FirebaseDatabase.getInstance().getReference().child("questions");
+        ref1.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                a = (int)dataSnapshot.getChildrenCount();
+                for(int i=1;i<a+1;i++){
+                    arrayList.add(i);
+                }
+                Collections.shuffle(arrayList);
+                Log.e("arr", String.valueOf(a));
+                updateQuestion();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.e("error",databaseError.toString());
+            }
+        });
+
         reverseTimer(60,timerTxt);
     }
 
     private void updateQuestion(){
-
         total++;
-        if (total >4){
+        if (total >10){
             Intent i =new Intent(QuestionActivity.this,ResultActivity.class);
-                i.putExtra("Total",String.valueOf(total));
+                i.putExtra("Total",String.valueOf(total-1));
                 i.putExtra("Correct",String.valueOf(correct));
                 i.putExtra("Incorrect",String.valueOf(wrong));
                 startActivity(i);
-
         }
         else {
-            ref= FirebaseDatabase.getInstance().getReference().child("questions").child(String.valueOf(total));
+            ref= FirebaseDatabase.getInstance().getReference().child("questions").child(String.valueOf(arrayList.get(total-1)));
             ref.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -121,7 +144,6 @@ public class QuestionActivity extends AppCompatActivity {
                                         updateQuestion();
                                     }
                                 },1500);
-
                             }
                         }
                     });
@@ -173,7 +195,6 @@ public class QuestionActivity extends AppCompatActivity {
                                         updateQuestion();
                                     }
                                 },1500);
-
                             }
                         }
                     });
@@ -226,7 +247,6 @@ public class QuestionActivity extends AppCompatActivity {
                                         updateQuestion();
                                     }
                                 },1500);
-
                             }
                         }
                     });
@@ -279,12 +299,9 @@ public class QuestionActivity extends AppCompatActivity {
                                         updateQuestion();
                                     }
                                 },1500);
-
                             }
                         }
                     });
-
-
                 }
 
                 @Override
@@ -293,7 +310,6 @@ public class QuestionActivity extends AppCompatActivity {
                 }
             });
         }
-
     }
 
     public void reverseTimer(int seconds,final TextView tv){

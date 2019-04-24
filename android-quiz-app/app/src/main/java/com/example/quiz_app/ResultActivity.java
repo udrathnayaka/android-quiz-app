@@ -39,7 +39,6 @@ public class ResultActivity extends AppCompatActivity {
             String correct =i.getStringExtra("Correct");
             String wrong = i.getStringExtra("Incorrect");
 
-
             t1.setText(questions);
             t2.setText(correct);
             t3.setText(wrong);

@@ -11,5 +11,7 @@ public class AdminQuestion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_admin_question);
+
+        //load question details into the ui when row is clicked
     }
 }

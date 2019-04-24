@@ -54,7 +54,6 @@ public class DashboardActivity extends AppCompatActivity {
         });
 
         imageExit.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View arg0) {
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
@@ -78,9 +77,6 @@ public class DashboardActivity extends AppCompatActivity {
                 AlertDialog alertDialog = alertDialogBuilder.create();
                 alertDialog.show();
             }
-
     });
-
-
     }
 }
