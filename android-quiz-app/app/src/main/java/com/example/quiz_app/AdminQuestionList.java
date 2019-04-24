@@ -1,5 +1,8 @@
 package com.example.quiz_app;
 
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,11 +18,15 @@ public class AdminQuestionList extends AppCompatActivity {
 
     ListView listView;
 
+    FloatingActionButton fab;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_admin_question_list);
+
+        FloatingActionButton fab = findViewById(R.id.fab);
 
         listView=(ListView) findViewById(R.id.listview);
         final ArrayList<String> arrayList =new ArrayList<>();
@@ -53,8 +60,21 @@ public class AdminQuestionList extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
                 Toast.makeText(AdminQuestionList.this,"Clicked Item:"+1+""+arrayList.get(i).toString(),Toast.LENGTH_SHORT).show();
+
+                    Intent i2 =new Intent(AdminQuestionList.this,AdminQuestion.class);
+                    startActivity(i2);
+
             }
         });
-        }
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i =new Intent(AdminQuestionList.this,InsertQuestionActivity.class);
+                startActivity(i);
+            }
+        });
     }
+}
+
 
