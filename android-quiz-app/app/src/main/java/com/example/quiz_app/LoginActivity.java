@@ -60,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
                             startActivity(new Intent(getApplicationContext(),
                                     AdminQuestionList.class));
                         }else {
-                            Toast.makeText(LoginActivity.this, "couldn't login",
+                            Toast.makeText(LoginActivity.this, "Couldn't login",
                                     Toast.LENGTH_SHORT).show();
                         }
                     }
