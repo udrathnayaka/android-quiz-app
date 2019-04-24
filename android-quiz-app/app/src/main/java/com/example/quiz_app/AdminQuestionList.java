@@ -62,9 +62,9 @@ public class AdminQuestionList extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
                 Toast.makeText(AdminQuestionList.this,"Clicked Item:"+1+""+arrayList.get(i).toString(),Toast.LENGTH_SHORT).show();
 
-                    Intent i2 =new Intent(AdminQuestionList.this,UpdateActivity.class);
+                    Intent i2 =new Intent(AdminQuestionList.this,AdminQuestion.class);
                     startActivity(i2);
-               
+
             }
         });
 

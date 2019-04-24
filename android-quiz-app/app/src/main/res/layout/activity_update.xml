@@ -79,7 +79,7 @@
         android:gravity="center">
 
         <Button
-            android:id="@+id/btnInsert"
+            android:id="@+id/btnupdate"
             android:layout_marginTop="10dp"
             android:layout_width="100dp"
             android:layout_height="50dp"
@@ -89,6 +89,8 @@
             android:padding="10dp"
             android:textSize="17dp"
             android:text="Update"/>
+
+
 
 
 
