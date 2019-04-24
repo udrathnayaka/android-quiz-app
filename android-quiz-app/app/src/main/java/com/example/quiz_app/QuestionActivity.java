@@ -61,7 +61,6 @@ public class QuestionActivity extends AppCompatActivity {
                     arrayList.add(i);
                 }
                 Collections.shuffle(arrayList);
-                Log.e("arr", String.valueOf(a));
                 updateQuestion();
             }
 

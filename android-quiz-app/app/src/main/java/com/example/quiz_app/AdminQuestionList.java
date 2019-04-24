@@ -26,7 +26,7 @@ public class AdminQuestionList extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_admin_question_list);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
+        fab = findViewById(R.id.fab);
 
         listView=(ListView) findViewById(R.id.listview);
         final ArrayList<String> arrayList =new ArrayList<>();
