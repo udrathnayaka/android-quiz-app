@@ -12,13 +12,20 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.quiz_app.Model.Question;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class AdminQuestionList extends AppCompatActivity {
 
     ListView listView;
-
     FloatingActionButton fab;
+    DatabaseReference ref;
+    //list to store questions from db
+    List<Question> questions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,42 +34,27 @@ public class AdminQuestionList extends AppCompatActivity {
         setContentView(R.layout.activity_admin_question_list);
 
         fab = findViewById(R.id.fab);
-
         listView=(ListView) findViewById(R.id.listview);
-        final ArrayList<String> arrayList =new ArrayList<>();
 
-        arrayList.add("Question 01");
-        arrayList.add("Question 02");
-        arrayList.add("Question 03");
-        arrayList.add("Question 04");
-        arrayList.add("Question 05");
-        arrayList.add("Question 06");
-        arrayList.add("Question 07");
-        arrayList.add("Question 08");
-        arrayList.add("Question 09");
-        arrayList.add("Question 10");
-        arrayList.add("Question 11");
-        arrayList.add("Question 12");
-        arrayList.add("Question 13");
-        arrayList.add("Question 14");
-        arrayList.add("Question 15");
-        arrayList.add("Question 16");
-        arrayList.add("Question 17");
-        arrayList.add("Question 18");
-        arrayList.add("Question 19");
-        arrayList.add("Question 20");
-
-        ArrayAdapter arrayAdapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1,arrayList);
-
-        listView.setAdapter(arrayAdapter);
+        ref= FirebaseDatabase.getInstance().getReference("questions");
+        questions = new ArrayList<>();
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
-                Toast.makeText(AdminQuestionList.this,"Clicked Item:"+1+""+arrayList.get(i).toString(),Toast.LENGTH_SHORT).show();
+                //Toast.makeText(AdminQuestionList.this,"Clicked Item:"+1+""+arrayList.get(i).toString(),Toast.LENGTH_SHORT).show();
 
-                    Intent i2 =new Intent(AdminQuestionList.this,AdminQuestion.class);
-                    startActivity(i2);
+                Question question = questions.get(i);
+                Intent i2 =new Intent(AdminQuestionList.this,AdminQuestion.class);
+
+                i2.putExtra("q",question.getQuestion());
+                i2.putExtra("one",question.getOption1());
+                i2.putExtra("two",question.getOption2());
+                i2.putExtra("three",question.getOption3());
+                i2.putExtra("four",question.getOption4());
+                i2.putExtra("ans",question.getAnswer());
+
+                startActivity(i2);
 
             }
         });
@@ -76,5 +68,3 @@ public class AdminQuestionList extends AppCompatActivity {
         });
     }
 }
-
-
