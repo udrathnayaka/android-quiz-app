@@ -21,6 +21,8 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -87,19 +89,38 @@ public class AdminQuestionList extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
-                Question question = questions.get(i);
-                Intent i2 =new Intent(AdminQuestionList.this,AdminQuestion.class);
 
-                //i2.putExtra("id",idd);
-                //Log.e("id", String.valueOf(idd[0]));
-                i2.putExtra("q",question.getQuestion());
-                i2.putExtra("one",question.getOption1());
-                i2.putExtra("two",question.getOption2());
-                i2.putExtra("three",question.getOption3());
-                i2.putExtra("four",question.getOption4());
-                i2.putExtra("ans",question.getAnswer());
+                final Question question = questions.get(i);
+                ref1 = FirebaseDatabase.getInstance().getReference().child("questions");
+                Query query = ref1.orderByChild("question").equalTo(question.getQuestion());
 
-                startActivity(i2);
+                query.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for(DataSnapshot child: dataSnapshot.getChildren()){
+                            String key = child.getKey();
+                            //int key = ref.getRef(i).getKey();
+
+                            Intent i2 =new Intent(AdminQuestionList.this,AdminQuestion.class);
+
+                            i2.putExtra("id",key);
+                            i2.putExtra("q",question.getQuestion());
+                            i2.putExtra("one",question.getOption1());
+                            i2.putExtra("two",question.getOption2());
+                            i2.putExtra("three",question.getOption3());
+                            i2.putExtra("four",question.getOption4());
+                            i2.putExtra("ans",question.getAnswer());
+
+                            startActivity(i2);
+                            finish();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
             }
         });
 

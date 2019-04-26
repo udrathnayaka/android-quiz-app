@@ -64,6 +64,8 @@ public class InsertQuestionActivity extends AppCompatActivity {
                 //check if empty
                 if(!TextUtils.isEmpty(q) && !TextUtils.isEmpty(op1) && !TextUtils.isEmpty(op2)
                         && !TextUtils.isEmpty(op3) && !TextUtils.isEmpty(op4) && !TextUtils.isEmpty(answer)){
+                    //check if same question exist
+
                     //create primary key
                     int a = (int) dataSnapshot.getChildrenCount()+1;
 

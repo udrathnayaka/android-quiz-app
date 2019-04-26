@@ -12,6 +12,7 @@ public class AdminQuestion extends AppCompatActivity {
 
     Button btnUpdate, btnDelete;
     TextView quest, answ, opt1, opt2, opt3, opt4;
+    String question, one, two, three, four, answer, key;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,12 +32,13 @@ public class AdminQuestion extends AppCompatActivity {
 
         //get details from list row using intent
         Intent intent = getIntent();
-        String question = intent.getStringExtra("q");
-        String one = intent.getStringExtra("one");
-        String two = intent.getStringExtra("two");
-        String three = intent.getStringExtra("three");
-        String four = intent.getStringExtra("four");
-        String answer = intent.getStringExtra("ans");
+        question = intent.getStringExtra("q");
+        one = intent.getStringExtra("one");
+        two = intent.getStringExtra("two");
+        three = intent.getStringExtra("three");
+        four = intent.getStringExtra("four");
+        answer = intent.getStringExtra("ans");
+        key = intent.getStringExtra("id");
 
         //load question details into the ui when row is clicked
         quest.setText(question);
@@ -50,8 +52,18 @@ public class AdminQuestion extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //redirect to update activity
-                Intent i = new Intent(getApplicationContext(),UpdateActivity.class);
-                startActivity(i);
+
+                Intent intent1 = new Intent(getApplicationContext(),UpdateActivity.class);
+
+                intent1.putExtra("qe",question);
+                intent1.putExtra("one",one);
+                intent1.putExtra("two",two);
+                intent1.putExtra("three",three);
+                intent1.putExtra("four",four);
+                intent1.putExtra("ans",answer);
+                intent1.putExtra("id",key);
+                startActivity(intent1);
+                finish();
             }
         });
 
@@ -61,5 +73,12 @@ public class AdminQuestion extends AppCompatActivity {
                 //code to delete selected record
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(),AdminQuestionList.class);
+        startActivity(intent);
+        finish();
     }
 }
