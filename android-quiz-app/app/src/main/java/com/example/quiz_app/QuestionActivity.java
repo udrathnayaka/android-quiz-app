@@ -81,6 +81,7 @@ public class QuestionActivity extends AppCompatActivity {
             i.putExtra("Correct",String.valueOf(correct));
             i.putExtra("Incorrect",String.valueOf(wrong));
             startActivity(i);
+            finish();
         }
         else {
             ref= FirebaseDatabase.getInstance().getReference().child("questions").child(String.valueOf(arrayList.get(total-1)));
@@ -330,6 +331,7 @@ public class QuestionActivity extends AppCompatActivity {
                 myIntent.putExtra("Correct",String.valueOf(correct));
                 myIntent.putExtra("Incorrect",String.valueOf(wrong));
                 startActivity(myIntent);
+                finish();
             }
         }.start();
     }
