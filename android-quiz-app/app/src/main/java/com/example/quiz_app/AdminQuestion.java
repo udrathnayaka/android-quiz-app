@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
@@ -20,6 +21,7 @@ public class AdminQuestion extends AppCompatActivity {
     Button btnUpdate, btnDelete;
     TextView quest, answ, opt1, opt2, opt3, opt4;
     String question, one, two, three, four, answer, key;
+    ImageView imgbackbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +29,7 @@ public class AdminQuestion extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_admin_question);
 
-        //initialize btns & textviews
+        //initialize btns & textviews, image view
         quest = (TextView) findViewById(R.id.questionn);
         opt1 = (TextView) findViewById(R.id.onee);
         opt2 = (TextView) findViewById(R.id.twoo);
@@ -36,6 +38,7 @@ public class AdminQuestion extends AppCompatActivity {
         answ = (TextView) findViewById(R.id.answerr);
         btnUpdate = (Button) findViewById(R.id.btnUpdate);
         btnDelete = (Button) findViewById(R.id.btnDelete);
+        imgbackbutton = (ImageView) findViewById(R.id.imgbackbutton);
 
         //get details from list row using intent
         Intent intent = getIntent();
@@ -109,6 +112,13 @@ public class AdminQuestion extends AppCompatActivity {
 
                 AlertDialog alertDialog = alertDialogBuilder.create();
                 alertDialog.show();
+            }
+        });
+
+        imgbackbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
             }
         });
     }

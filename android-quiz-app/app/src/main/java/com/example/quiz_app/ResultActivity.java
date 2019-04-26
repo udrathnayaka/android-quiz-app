@@ -45,21 +45,21 @@ public class ResultActivity extends AppCompatActivity {
             t2.setText(correct);
             t3.setText(wrong);
 
-        Handler handler = new Handler();
+            Handler handler = new Handler();
 
-        handler.postDelayed(new Runnable() {
-            public void run() {
-                Intent i = new Intent(getApplicationContext(),HomeActivity.class);
-                finish();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    Intent i = new Intent(getApplicationContext(),HomeActivity.class);
+                    startActivity(i);
+                    finish();
+                }
+            }, 1000 * 10);
             }
-        }, 1000 * 10);
-        }
 
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.putExtra("EXIT", true);
         startActivity(intent);
         finish();
     }

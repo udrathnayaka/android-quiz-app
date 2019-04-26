@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.quiz_app.Model.Question;
@@ -30,6 +31,7 @@ public class InsertQuestionActivity extends AppCompatActivity {
     EditText qtext, btn1, btn2, btn3, btn4, ans;
     DatabaseReference ref, ref1;
     int key1;
+    ImageView imgback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +41,7 @@ public class InsertQuestionActivity extends AppCompatActivity {
 
         ref = FirebaseDatabase.getInstance().getReference("questions");
 
-        //initialize buttons, edittext
+        //initialize buttons, edittext, Image View
         qtext = (EditText) findViewById(R.id.qtxt);
         btn1 = (EditText) findViewById(R.id.btn1);
         btn2 = (EditText) findViewById(R.id.btn2);
@@ -47,6 +49,7 @@ public class InsertQuestionActivity extends AppCompatActivity {
         btn4 = (EditText) findViewById(R.id.btn4);
         ans = (EditText) findViewById(R.id.ans);
         btnInsert = (Button) findViewById(R.id.btnInsert);
+        imgback = (ImageView) findViewById(R.id.imgback);
 
         ref1 = FirebaseDatabase.getInstance().getReference().child("questions");
         ref1.orderByKey().limitToLast(1).addChildEventListener(new ChildEventListener() {
@@ -93,7 +96,14 @@ public class InsertQuestionActivity extends AppCompatActivity {
                 AlertDialog alertDialog = alertDialogBuilder.create();
                 alertDialog.show();
             }
-        });        
+        });
+
+        imgback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
     }
 
     private void addToDatabase() {

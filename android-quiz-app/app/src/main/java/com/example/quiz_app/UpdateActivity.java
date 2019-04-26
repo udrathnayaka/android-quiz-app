@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ public class UpdateActivity extends AppCompatActivity {
     EditText opt1, opt2, opt3, opt4, ans;
     Button save, cancel;
     DatabaseReference ref;
+    ImageView backbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +32,7 @@ public class UpdateActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_update);
 
-        //initialize button, textview, edittext
+        //initialize button, textview, edittext, imageview
         questionText = (TextView) findViewById(R.id.questionView);
         opt1 = (EditText) findViewById(R.id.edit1);
         opt2 = (EditText) findViewById(R.id.edit2);
@@ -39,6 +41,7 @@ public class UpdateActivity extends AppCompatActivity {
         ans = (EditText) findViewById(R.id.editAnswer);
         save = (Button) findViewById(R.id.btnSave);
         cancel = (Button) findViewById(R.id.btnCancel);
+        backbtn = (ImageView) findViewById(R.id.backbtn);
 
         //get intent from Admin Question view
         Intent intent = getIntent();
@@ -101,6 +104,13 @@ public class UpdateActivity extends AppCompatActivity {
                 Intent intent2 = new Intent(getApplicationContext(),AdminQuestionList.class);
                 startActivity(intent2);
                 finish();
+            }
+        });
+
+        backbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
             }
         });
     }

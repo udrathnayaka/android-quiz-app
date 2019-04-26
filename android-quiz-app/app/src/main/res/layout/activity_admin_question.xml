@@ -9,13 +9,12 @@
     android:gravity="center" >
 
     <ImageView
-        android:id="@+id/imgbackbtnn"
-        android:background="@drawable/backbtn"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="-150dp"
+        android:id="@+id/imgbackbutton"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        />
+        android:layout_marginLeft="-150dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/backbtn" />
 
     <TextView
         android:id="@+id/questionn"
