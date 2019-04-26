@@ -8,11 +8,20 @@
     android:layout_centerVertical="true"
     android:gravity="center" >
 
+    <ImageView
+        android:id="@+id/imgbackbtnn"
+        android:background="@drawable/backbtn"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="-150dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        />
+
     <TextView
         android:id="@+id/questionn"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/login_ui"
         android:gravity="center"
         android:padding="5dp"

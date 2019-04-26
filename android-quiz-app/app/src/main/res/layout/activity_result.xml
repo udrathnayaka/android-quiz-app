@@ -4,18 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/scorepage"
+    android:background="@drawable/questionbackground"
     android:orientation="vertical"
     android:layout_gravity="center"
     tools:context=".ResultActivity">
 
+    <pl.droidsonroids.gif.GifImageView
+
+        android:src="@drawable/gif"
+        android:background="@drawable/gif"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="100dp"
+        />
+
         <ImageView
             android:id="@+id/imgHome"
             android:background="@drawable/home"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="30dp"
+            android:layout_height="28dp"
             />
 
 
