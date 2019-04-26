@@ -77,17 +77,17 @@ public class QuestionActivity extends AppCompatActivity {
         total++;
         if (total >10){
             Intent i =new Intent(QuestionActivity.this,ResultActivity.class);
-                i.putExtra("Total",String.valueOf(total-1));
-                i.putExtra("Correct",String.valueOf(correct));
-                i.putExtra("Incorrect",String.valueOf(wrong));
-                startActivity(i);
+            i.putExtra("Total",String.valueOf(total-1));
+            i.putExtra("Correct",String.valueOf(correct));
+            i.putExtra("Incorrect",String.valueOf(wrong));
+            startActivity(i);
         }
         else {
             ref= FirebaseDatabase.getInstance().getReference().child("questions").child(String.valueOf(arrayList.get(total-1)));
             ref.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                   final Question question =dataSnapshot.getValue(Question.class);
+                    final Question question =dataSnapshot.getValue(Question.class);
 
                     t1_question.setText(question.getQuestion());
                     b1.setText(question.getOption1());
@@ -107,9 +107,9 @@ public class QuestionActivity extends AppCompatActivity {
                                 handler.postDelayed(new Runnable() {
                                     @Override
                                     public void run() {
-                                      //b1.setBackgroundColor(Color.parseColor("#FF9800"));
-                                       b1.setBackgroundResource(R.drawable.rounded_button_home);
-                                       updateQuestion();
+                                        //b1.setBackgroundColor(Color.parseColor("#FF9800"));
+                                        b1.setBackgroundResource(R.drawable.rounded_button_home);
+                                        updateQuestion();
                                     }
                                 },1500);
                             }
@@ -132,13 +132,13 @@ public class QuestionActivity extends AppCompatActivity {
                                 handler.postDelayed(new Runnable() {
                                     @Override
                                     public void run() {
-                                       // b1.setBackgroundColor(Color.parseColor("#FF9800"));
+                                        // b1.setBackgroundColor(Color.parseColor("#FF9800"));
                                         b1.setBackgroundResource(R.drawable.rounded_button_home);
-                                       // b2.setBackgroundColor(Color.parseColor("#FF9800"));
+                                        // b2.setBackgroundColor(Color.parseColor("#FF9800"));
                                         b2.setBackgroundResource(R.drawable.rounded_button_home);
-                                       // b3.setBackgroundColor(Color.parseColor("#FF9800"));
+                                        // b3.setBackgroundColor(Color.parseColor("#FF9800"));
                                         b3.setBackgroundResource(R.drawable.rounded_button_home);
-                                       // b4.setBackgroundColor(Color.parseColor("#FF9800"));
+                                        // b4.setBackgroundColor(Color.parseColor("#FF9800"));
                                         b4.setBackgroundResource(R.drawable.rounded_button_home);
                                         updateQuestion();
                                     }
@@ -159,7 +159,7 @@ public class QuestionActivity extends AppCompatActivity {
                                 handler.postDelayed(new Runnable() {
                                     @Override
                                     public void run() {
-                                       // b2.setBackgroundResource(R.drawable.rounded_button_home);
+                                        // b2.setBackgroundResource(R.drawable.rounded_button_home);
                                         updateQuestion();
                                     }
                                 },1500);
@@ -185,12 +185,12 @@ public class QuestionActivity extends AppCompatActivity {
                                     public void run() {
                                         //b1.setBackgroundColor(Color.parseColor("#03A9f4"));
                                         b1.setBackgroundResource(R.drawable.rounded_button_home);
-                                       // b2.setBackgroundColor(Color.parseColor("#03A9f4"));
+                                        // b2.setBackgroundColor(Color.parseColor("#03A9f4"));
                                         b2.setBackgroundResource(R.drawable.rounded_button_home);
                                         b3.setBackgroundResource(R.drawable.rounded_button_home);
-                                       // b3.setBackgroundColor(Color.parseColor("#03A9f4"));
+                                        // b3.setBackgroundColor(Color.parseColor("#03A9f4"));
                                         b4.setBackgroundResource(R.drawable.rounded_button_home);
-                                       //b4.setBackgroundColor(Color.parseColor("#03A9f4"));
+                                        //b4.setBackgroundColor(Color.parseColor("#03A9f4"));
                                         updateQuestion();
                                     }
                                 },1500);
@@ -210,7 +210,7 @@ public class QuestionActivity extends AppCompatActivity {
                                 handler.postDelayed(new Runnable() {
                                     @Override
                                     public void run() {
-                                       // b3.setBackgroundColor(Color.parseColor("#03A9F4"));
+                                        // b3.setBackgroundColor(Color.parseColor("#03A9F4"));
                                         b3.setBackgroundResource(R.drawable.rounded_button_home);
                                         updateQuestion();
                                     }
@@ -235,13 +235,13 @@ public class QuestionActivity extends AppCompatActivity {
                                 handler.postDelayed(new Runnable() {
                                     @Override
                                     public void run() {
-                                       // b1.setBackgroundColor(Color.parseColor("#FF9800"));
+                                        // b1.setBackgroundColor(Color.parseColor("#FF9800"));
                                         b1.setBackgroundResource(R.drawable.rounded_button_home);
-                                       // b2.setBackgroundColor(Color.parseColor("#FF9800"));
+                                        // b2.setBackgroundColor(Color.parseColor("#FF9800"));
                                         b2.setBackgroundResource(R.drawable.rounded_button_home);
-                                       // b3.setBackgroundColor(Color.parseColor("#FF9800"));
+                                        // b3.setBackgroundColor(Color.parseColor("#FF9800"));
                                         b3.setBackgroundResource(R.drawable.rounded_button_home);
-                                       // b4.setBackgroundColor(Color.parseColor("#FF9800"));
+                                        // b4.setBackgroundColor(Color.parseColor("#FF9800"));
                                         b4.setBackgroundResource(R.drawable.rounded_button_home);
                                         updateQuestion();
                                     }
@@ -262,7 +262,7 @@ public class QuestionActivity extends AppCompatActivity {
                                 handler.postDelayed(new Runnable() {
                                     @Override
                                     public void run() {
-                                       // b4.setBackgroundColor(Color.parseColor("#FF9800"));
+                                        // b4.setBackgroundColor(Color.parseColor("#FF9800"));
                                         b4.setBackgroundResource(R.drawable.rounded_button_home);
                                         updateQuestion();
                                     }
@@ -287,13 +287,13 @@ public class QuestionActivity extends AppCompatActivity {
                                 handler.postDelayed(new Runnable() {
                                     @Override
                                     public void run() {
-                                       // b1.setBackgroundColor(Color.parseColor("#FF9800"));
+                                        // b1.setBackgroundColor(Color.parseColor("#FF9800"));
                                         b1.setBackgroundResource(R.drawable.rounded_button_home);
-                                       // b2.setBackgroundColor(Color.parseColor("#FF9800"));
+                                        // b2.setBackgroundColor(Color.parseColor("#FF9800"));
                                         b2.setBackgroundResource(R.drawable.rounded_button_home);
-                                       // b3.setBackgroundColor(Color.parseColor("#FF9800"));
+                                        // b3.setBackgroundColor(Color.parseColor("#FF9800"));
                                         b3.setBackgroundResource(R.drawable.rounded_button_home);
-                                       // b4.setBackgroundColor(Color.parseColor("#FF9800"));
+                                        // b4.setBackgroundColor(Color.parseColor("#FF9800"));
                                         b4.setBackgroundResource(R.drawable.rounded_button_home);
                                         updateQuestion();
                                     }
@@ -321,16 +321,16 @@ public class QuestionActivity extends AppCompatActivity {
                 int minutes =  seconds/60;
                 seconds= seconds % 60;
                 tv.setText(String.format("%02d",minutes)+":" +String.format("%02d",seconds));
-                }
+            }
 
-                public void onFinish(){
+            public void onFinish(){
                 tv.setText("Completed");
                 Intent myIntent=new Intent (QuestionActivity.this,ResultActivity.class);
                 myIntent.putExtra("Total",String.valueOf(total));
                 myIntent.putExtra("Correct",String.valueOf(correct));
                 myIntent.putExtra("Incorrect",String.valueOf(wrong));
                 startActivity(myIntent);
-                }
+            }
         }.start();
     }
 }

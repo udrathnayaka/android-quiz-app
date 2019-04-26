@@ -44,17 +44,7 @@ public class ResultActivity extends AppCompatActivity {
             t1.setText(questions);
             t2.setText(correct);
             t3.setText(wrong);
-
-            Handler handler = new Handler();
-
-            handler.postDelayed(new Runnable() {
-                public void run() {
-                    Intent i = new Intent(getApplicationContext(),HomeActivity.class);
-                    startActivity(i);
-                    finish();
-                }
-            }, 1000 * 10);
-            }
+    }
 
     @Override
     public void onBackPressed() {
