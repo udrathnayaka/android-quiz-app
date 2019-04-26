@@ -1,6 +1,8 @@
 package com.example.quiz_app;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -75,17 +77,38 @@ public class AdminQuestion extends AppCompatActivity {
         btnDelete.setOnClickListener(new View.OnClickListener (){
             @Override
             public void onClick(View view) {
-                //code to delete selected record
-                ref = FirebaseDatabase.getInstance().getReference("questions").child(key);
 
-                //removing the question
-                ref.removeValue();
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                        AdminQuestion.this);
 
-                //return to question list
-                Intent iback = new Intent(getApplicationContext(),AdminQuestionList.class);
-                startActivity(iback);
-                finish();
-                Log.e("delete","success");
+                alertDialogBuilder.setTitle("Do you want to delete question?");
+                alertDialogBuilder
+                        .setCancelable(false)
+                        .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+
+                                //code to delete selected record
+                                ref = FirebaseDatabase.getInstance().getReference("questions").child(key);
+
+                                //removing the question
+                                ref.removeValue();
+
+                                //return to question list
+                                Intent iback = new Intent(getApplicationContext(),AdminQuestionList.class);
+                                startActivity(iback);
+                                finish();
+                                Log.e("delete","success");
+                            }
+                        })
+                        .setNegativeButton("No",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
             }
         });
     }

@@ -60,12 +60,11 @@ public class LoginActivity extends AppCompatActivity {
                             startActivity(new Intent(getApplicationContext(),
                                     AdminQuestionList.class));
                         }else {
-                            Toast.makeText(LoginActivity.this, "Couldn't login",
+                            Toast.makeText(LoginActivity.this, "Login Failed! Try Again.",
                                     Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
     }
-
 }
 

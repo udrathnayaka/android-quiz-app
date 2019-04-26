@@ -1,6 +1,8 @@
 package com.example.quiz_app;
 
+import android.content.DialogInterface;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -43,8 +45,27 @@ public class InsertQuestionActivity extends AppCompatActivity {
         btnInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addToDatabase();
-                finish();
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                        InsertQuestionActivity.this);
+
+                alertDialogBuilder.setTitle("Do you want to add this Question?");
+                alertDialogBuilder
+                        .setCancelable(false)
+                        .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                addToDatabase();
+                                finish();
+                            }
+                        })
+                        .setNegativeButton("No",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
             }
         });        
     }
@@ -94,6 +115,10 @@ public class InsertQuestionActivity extends AppCompatActivity {
 
             }
         });
+    }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

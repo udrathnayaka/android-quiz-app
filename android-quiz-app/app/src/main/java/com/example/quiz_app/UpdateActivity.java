@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.quiz_app.Model.Question;
 import com.google.firebase.database.DatabaseReference;
@@ -76,6 +77,8 @@ public class UpdateActivity extends AppCompatActivity {
                     Question question1 = new Question(answer, option1, option2, option3, option4, question);
                     ref.setValue(question1);
                     Log.e("update","success");
+                    Toast.makeText(UpdateActivity.this, "Successfully Updated!",
+                            Toast.LENGTH_SHORT).show();
 
                     //set intent to start list view
                     Intent intent1 = new Intent(getApplicationContext(),AdminQuestionList.class);
@@ -83,6 +86,8 @@ public class UpdateActivity extends AppCompatActivity {
                     finish();
                 } else{
                     Log.e("update","fail");
+                    Toast.makeText(UpdateActivity.this, "Fill all fields!",
+                            Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -91,6 +96,8 @@ public class UpdateActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //set intent to start list view
+                Toast.makeText(UpdateActivity.this, "Question Update cancelled",
+                        Toast.LENGTH_SHORT).show();
                 Intent intent2 = new Intent(getApplicationContext(),AdminQuestionList.class);
                 startActivity(intent2);
                 finish();
@@ -100,7 +107,7 @@ public class UpdateActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(getApplicationContext(), AdminQuestion.class);
+        Intent intent = new Intent(getApplicationContext(), AdminQuestionList.class);
         startActivity(intent);
         finish();
     }
