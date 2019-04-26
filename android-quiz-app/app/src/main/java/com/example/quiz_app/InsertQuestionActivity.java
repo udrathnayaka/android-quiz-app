@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.quiz_app.Model.Question;
 import com.google.firebase.database.ChildEventListener;
@@ -54,26 +55,17 @@ public class InsertQuestionActivity extends AppCompatActivity {
                 key1= Integer.parseInt(dataSnapshot.getKey());
             }
 
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) { }
 
             @Override
-            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-            }
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) { }
 
             @Override
-            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-
-            }
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) { }
 
             @Override
-            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
+            public void onCancelled(@NonNull DatabaseError databaseError) { }
         });
 
         btnInsert.setOnClickListener(new View.OnClickListener() {
@@ -82,7 +74,7 @@ public class InsertQuestionActivity extends AppCompatActivity {
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
                         InsertQuestionActivity.this);
 
-                alertDialogBuilder.setTitle("Do you want to add this Question?");
+                alertDialogBuilder.setTitle("Do you want to add this to Question Bank?");
                 alertDialogBuilder
                         .setCancelable(false)
                         .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
@@ -120,9 +112,6 @@ public class InsertQuestionActivity extends AppCompatActivity {
                 if(!TextUtils.isEmpty(q) && !TextUtils.isEmpty(op1) && !TextUtils.isEmpty(op2)
                         && !TextUtils.isEmpty(op3) && !TextUtils.isEmpty(op4) && !TextUtils.isEmpty(answer)){
 
-                    //check if same question exist
-
-
                     //create primary key
                     int a = key1+1;
 
@@ -141,8 +130,13 @@ public class InsertQuestionActivity extends AppCompatActivity {
                     ans.setText("");
 
                     Log.e("insert","success");
+                    Toast.makeText(InsertQuestionActivity.this, "Question added!",
+                            Toast.LENGTH_SHORT).show();
+
                 } else{
                     Log.e("insert","fail");
+                    Toast.makeText(InsertQuestionActivity.this, "Question adding failed!",
+                            Toast.LENGTH_SHORT).show();
                 }
             }
 
