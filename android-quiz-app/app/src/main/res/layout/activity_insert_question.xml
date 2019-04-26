@@ -8,15 +8,24 @@
     android:layout_centerVertical="true"
     android:gravity="center" >
 
+    <ImageView
+        android:id="@+id/imgback"
+        android:background="@drawable/backbtn"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="-150dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        />
+
     <EditText
         android:id="@+id/qtxt"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/login_ui"
         android:gravity="center"
         android:padding="5dp"
-        android:text="----- Question ----"
+        android:hint="Enter the question here"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="15sp"
@@ -29,7 +38,7 @@
         android:layout_marginTop="100dp"
         android:background="@drawable/login_ui"
         android:padding="10dp"
-        android:text="-- Option 1 --"
+        android:hint="Option 01"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="15dp" />
@@ -41,7 +50,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/login_ui"
         android:padding="10dp"
-        android:text="-- Option 2  "
+        android:hint="Option 02"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="15dp" />
@@ -53,7 +62,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/login_ui"
         android:padding="10dp"
-        android:text="-- Option 3 --"
+        android:hint="Option 03"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="15dp" />
@@ -65,7 +74,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/login_ui"
         android:padding="10dp"
-        android:text="-- Option 4 --"
+        android:hint="Option 04"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="15dp" />
@@ -81,7 +90,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/login_ui"
         android:padding="10dp"
-        android:text="--Answer--"
+        android:hint="Answer"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="15dp" />

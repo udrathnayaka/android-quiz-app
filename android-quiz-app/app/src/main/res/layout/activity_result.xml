@@ -9,13 +9,23 @@
     android:layout_gravity="center"
     tools:context=".ResultActivity">
 
+    <pl.droidsonroids.gif.GifImageView
+
+        android:src="@drawable/gif"
+        android:background="@drawable/gif"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="150dp"
+        />
+
         <ImageView
             android:id="@+id/imgHome"
             android:background="@drawable/home"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="30dp"
+            android:layout_height="28dp"
             />
 
 
