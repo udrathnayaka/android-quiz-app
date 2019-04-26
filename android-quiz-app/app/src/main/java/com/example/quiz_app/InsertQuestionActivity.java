@@ -1,7 +1,9 @@
 package com.example.quiz_app;
 
+import android.app.DownloadManager;
 import android.content.DialogInterface;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,10 +15,12 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.quiz_app.Model.Question;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 public class InsertQuestionActivity extends AppCompatActivity {
@@ -24,6 +28,7 @@ public class InsertQuestionActivity extends AppCompatActivity {
     Button btnInsert;
     EditText qtext, btn1, btn2, btn3, btn4, ans;
     DatabaseReference ref, ref1;
+    int key1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +46,36 @@ public class InsertQuestionActivity extends AppCompatActivity {
         btn4 = (EditText) findViewById(R.id.btn4);
         ans = (EditText) findViewById(R.id.ans);
         btnInsert = (Button) findViewById(R.id.btnInsert);
-        
+
+        ref1 = FirebaseDatabase.getInstance().getReference().child("questions");
+        ref1.orderByKey().limitToLast(1).addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                key1= Integer.parseInt(dataSnapshot.getKey());
+            }
+
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
         btnInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -85,10 +119,12 @@ public class InsertQuestionActivity extends AppCompatActivity {
                 //check if empty
                 if(!TextUtils.isEmpty(q) && !TextUtils.isEmpty(op1) && !TextUtils.isEmpty(op2)
                         && !TextUtils.isEmpty(op3) && !TextUtils.isEmpty(op4) && !TextUtils.isEmpty(answer)){
+
                     //check if same question exist
 
+
                     //create primary key
-                    int a = (int) dataSnapshot.getChildrenCount()+1;
+                    int a = key1+1;
 
                     //create question object
                     Question question = new Question(answer,op1,op2,op3,op4,q);
