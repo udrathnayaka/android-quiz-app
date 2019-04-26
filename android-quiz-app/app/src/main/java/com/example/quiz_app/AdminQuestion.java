@@ -3,13 +3,18 @@ package com.example.quiz_app;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class AdminQuestion extends AppCompatActivity {
 
+    DatabaseReference ref;
     Button btnUpdate, btnDelete;
     TextView quest, answ, opt1, opt2, opt3, opt4;
     String question, one, two, three, four, answer, key;
@@ -71,6 +76,16 @@ public class AdminQuestion extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //code to delete selected record
+                ref = FirebaseDatabase.getInstance().getReference("questions").child(key);
+
+                //removing the question
+                ref.removeValue();
+
+                //return to question list
+                Intent iback = new Intent(getApplicationContext(),AdminQuestionList.class);
+                startActivity(iback);
+                finish();
+                Log.e("delete","success");
             }
         });
     }
