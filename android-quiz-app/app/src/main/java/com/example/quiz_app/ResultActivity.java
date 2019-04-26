@@ -1,6 +1,7 @@
 package com.example.quiz_app;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +27,7 @@ public class ResultActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), HomeActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -42,6 +44,24 @@ public class ResultActivity extends AppCompatActivity {
             t1.setText(questions);
             t2.setText(correct);
             t3.setText(wrong);
+
+        Handler handler = new Handler();
+
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                Intent i = new Intent(getApplicationContext(),HomeActivity.class);
+                finish();
+            }
+        }, 1000 * 10);
         }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra("EXIT", true);
+        startActivity(intent);
+        finish();
     }
+}
 
