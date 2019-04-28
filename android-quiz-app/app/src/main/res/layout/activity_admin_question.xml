@@ -24,7 +24,7 @@
         android:background="@drawable/login_ui"
         android:gravity="center"
         android:padding="5dp"
-        android:text="-------Edit Question-----"
+        android:text="@string/editQuestion"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="15sp"
@@ -37,7 +37,7 @@
         android:layout_marginTop="100dp"
         android:background="@drawable/login_ui"
         android:padding="10dp"
-        android:text="Option 1"
+        android:text="@string/opt1"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="15dp" />
@@ -49,7 +49,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/login_ui"
         android:padding="10dp"
-        android:text="Option 2"
+        android:text="@string/opt2"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="15dp" />
@@ -61,7 +61,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/login_ui"
         android:padding="10dp"
-        android:text="Option 3"
+        android:text="@string/opt3"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="15dp" />
@@ -73,7 +73,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/login_ui"
         android:padding="10dp"
-        android:text="Option 4"
+        android:text="@string/opt4"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="15dp" />
@@ -89,7 +89,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/login_ui"
         android:padding="10dp"
-        android:text="Answer"
+        android:text="@string/ans"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="15dp" />

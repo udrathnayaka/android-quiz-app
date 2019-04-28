@@ -1,5 +1,36 @@
 <resources>
     <string name="app_name">Brainy Quiz</string>
+
     <string name="open">Open</string>
+
     <string name="close">Close</string>
+
+    <string name="editQuestion">-- Edit Question --</string>
+
+    <string name="opt1">-- Option 01 --</string>
+
+    <string name="opt2">-- Option 02 --</string>
+
+    <string name="opt3">-- Option 03 --</string>
+
+    <string name="opt4">-- Option 04 --</string>
+
+    <string name="ans">-- Answer --</string>
+
+    <string name="username">USERNAME-</string>
+
+    <string name="password">PASSWORD-</string>
+
+    <string name="signin">SIGN IN-</string>
+
+    <string name="admin">ADMINISTRATOR</string>
+
+    <string name="abt">  ABOUT US</string>
+
+    <string name="ins">INSTRUCTIONS</string>
+
+    <string name="exit">EXIT</string>
+
+    <string name="insert">INSERT</string>
+
 </resources>

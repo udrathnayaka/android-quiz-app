@@ -74,7 +74,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" ADMINISTRATOR"
+                    android:text="@string/admin"
                     android:typeface="normal"
                     android:textColor="#0E1843"
                     android:textSize="14sp" />
@@ -99,7 +99,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" ABOUT US"
+                    android:text="@string/abt"
                     android:textColor="#0E1843"
                     android:textSize="14sp" />
 

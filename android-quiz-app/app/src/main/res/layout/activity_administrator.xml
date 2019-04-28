@@ -28,7 +28,7 @@
         android:paddingLeft="20dp"
         android:textColor="#000000"
         android:textSize="12dp"
-        android:hint="USERNAME"
+        android:hint="@string/username"
         />
     <EditText
         android:id="@+id/password"
