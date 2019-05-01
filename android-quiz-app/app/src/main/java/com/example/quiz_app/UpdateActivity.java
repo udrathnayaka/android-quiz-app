@@ -71,6 +71,7 @@ public class UpdateActivity extends AppCompatActivity {
         opt4.setText(four);
         ans.setText(answer);
 
+        //update the selected question
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -105,6 +106,7 @@ public class UpdateActivity extends AppCompatActivity {
             }
         });
 
+        //cancel updating
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -117,6 +119,7 @@ public class UpdateActivity extends AppCompatActivity {
             }
         });
 
+        //return to list view
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

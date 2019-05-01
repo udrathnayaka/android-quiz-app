@@ -81,6 +81,7 @@ public class InsertQuestionActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError databaseError) { }
         });
 
+        //insert new record to database and refresh list view
         btnInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -116,6 +117,7 @@ public class InsertQuestionActivity extends AppCompatActivity {
         });
     }
 
+    //logic to add the record to database
     private void addToDatabase() {
 
         ref.addListenerForSingleValueEvent(new ValueEventListener() {

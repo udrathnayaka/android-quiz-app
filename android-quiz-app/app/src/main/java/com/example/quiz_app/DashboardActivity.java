@@ -39,6 +39,7 @@ public class DashboardActivity extends AppCompatActivity {
         imageInstructions = findViewById(R.id.imgInstructions);
         imageExit = findViewById(R.id.imgExit);
 
+        //administrator icon logic
         imageAdmin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,6 +48,7 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
+        //about us icon logic
         imageAboutUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,6 +57,7 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
+        //instructions icon logic
         imageInstructions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,6 +66,7 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
+        //exit icon logic
         imageExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {

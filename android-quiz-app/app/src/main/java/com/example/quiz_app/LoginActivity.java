@@ -56,6 +56,7 @@ public class LoginActivity extends AppCompatActivity {
         });
 
     }
+    //login logic for administrator authentication
     public void LoginUser(){
         String Email = email.getText().toString().trim();
         String Password = password.getText().toString().trim();

@@ -82,6 +82,10 @@ public class QuestionActivity extends AppCompatActivity {
         reverseTimer(60,timerTxt);
     }
 
+    //plays 10 random questions from the database one after another
+    //all ten questions are loaded into the same ui
+    //total increases by one once a question is answered
+    //incorrect and correct totals increase respectively
     private void updateQuestion(){
         total++;
         if (total >10){
@@ -321,6 +325,7 @@ public class QuestionActivity extends AppCompatActivity {
         }
     }
 
+    //reverse timer set for 60 seconds
     public void reverseTimer(int seconds,final TextView tv){
 
         new CountDownTimer(seconds* 1000+1000,1000){

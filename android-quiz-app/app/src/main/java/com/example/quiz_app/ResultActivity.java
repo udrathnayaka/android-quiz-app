@@ -30,8 +30,8 @@ public class ResultActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_result);
 
+        //return to home
         imgHome = findViewById(R.id.imgHome);
-
         imgHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -27,6 +27,7 @@ public class Question {
         this.question = question;
     }
 
+    //getters and setters
     public String getQuestion() {
         return question;
     }

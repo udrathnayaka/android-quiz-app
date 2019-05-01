@@ -87,6 +87,7 @@ public class AdminQuestion extends AppCompatActivity {
             }
         });
 
+        //delete selected question
         btnDelete.setOnClickListener(new View.OnClickListener (){
             @Override
             public void onClick(View view) {

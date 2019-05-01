@@ -44,6 +44,7 @@ public class AdminQuestionList extends AppCompatActivity {
     ListView listView;
     FloatingActionButton fab;
     DatabaseReference ref, ref1;
+
     //list to store questions from db
     List<Question> questions;
     ArrayAdapter<String>arrayAdapter;
@@ -63,6 +64,8 @@ public class AdminQuestionList extends AppCompatActivity {
         q = new ArrayList<>();
         final String[] idd = new String[1];
 
+        //add to list
+        //view all questions on firebase as a list
         ref.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
@@ -96,6 +99,7 @@ public class AdminQuestionList extends AppCompatActivity {
             }
         });
 
+        //pass data of a selected list item through intent
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
@@ -134,6 +138,7 @@ public class AdminQuestionList extends AppCompatActivity {
             }
         });
 
+        //compose button (start insert activity)
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -39,6 +39,7 @@ public class HomeActivity extends AppCompatActivity {
         buttonInstructions = findViewById(R.id.btnStartInstructions);
         buttonDashboard=findViewById(R.id.btnDashboard);
 
+        //start quiz button code
         buttonStartQuiz.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
@@ -47,6 +48,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        //instructions intent
         buttonInstructions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,6 +57,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        //main menu intent
         buttonDashboard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
