@@ -2,8 +2,12 @@ package com.example.quiz_app.Model;
 
 /**
  *
- * @author Shannon
- * @author Udana
+ * @author Shannon (IT16036758)
+ * @author Udana    (IT16069282)
+ * CTSE final project SE4010
+ *
+ * Question.java
+ * This class handles the Question model for the quiz app
  */
 
 public class Question {

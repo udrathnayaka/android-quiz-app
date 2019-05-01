@@ -6,8 +6,12 @@ import android.view.WindowManager;
 
 /**
  *
- * @author Shannon
- * @author Udana
+ * @author Shannon (IT16036758)
+ * @author Udana    (IT16069282)
+ * CTSE final project SE4010
+ *
+ * InstructionsActivity.java
+ * This class handles the logic to for the Instructions screen
  */
 
 public class InstructionsActivity extends AppCompatActivity {

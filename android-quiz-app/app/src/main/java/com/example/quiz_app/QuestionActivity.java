@@ -28,8 +28,12 @@ import java.util.Random;
 
 /**
  *
- * @author Shannon
- * @author Udana
+ * @author Shannon (IT16036758)
+ * @author Udana    (IT16069282)
+ * CTSE final project SE4010
+ *
+ * QuestionActivity.java
+ * This class handles the main app logic for the quiz game
  */
 
 public class QuestionActivity extends AppCompatActivity {

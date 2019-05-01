@@ -11,8 +11,12 @@ import android.widget.TextView;
 
 /**
  *
- * @author Shannon
- * @author Udana
+ * @author Shannon (IT16036758)
+ * @author Udana    (IT16069282)
+ * CTSE final project SE4010
+ *
+ * ResultActivity.java
+ * This class handles the logic for teh result screen upon finishing of the quiz game
  */
 
 public class ResultActivity extends AppCompatActivity {

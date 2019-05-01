@@ -17,8 +17,12 @@ import com.google.firebase.auth.FirebaseAuth;
 
 /**
  *
- * @author Shannon
- * @author Udana
+ * @author Shannon (IT16036758)
+ * @author Udana    (IT16069282)
+ * CTSE final project SE4010
+ *
+ * RegisterationActivity.java
+ * This class handles the logic for Registeration
  */
 
 public class RegistrationActivity extends AppCompatActivity {

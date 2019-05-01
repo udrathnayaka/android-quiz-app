@@ -19,8 +19,12 @@ import com.google.firebase.database.FirebaseDatabase;
 
 /**
  *
- * @author Shannon
- * @author Udana
+ * @author Shannon (IT16036758)
+ * @author Udana    (IT16069282)
+ * CTSE final project SE4010
+ *
+ * UpdateActivity.java
+ * This class handles the logic to update a Question
  */
 
 public class UpdateActivity extends AppCompatActivity {

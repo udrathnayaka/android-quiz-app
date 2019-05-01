@@ -14,8 +14,12 @@ import android.widget.RelativeLayout;
 
 /**
  *
- * @author Shannon
- * @author Udana
+ * @author Shannon (IT16036758)
+ * @author Udana    (IT16069282)
+ * CTSE final project SE4010
+ *
+ * HomeActivity.java
+ * This class handles the logic for the Home screen
  */
 
 public class HomeActivity extends AppCompatActivity {

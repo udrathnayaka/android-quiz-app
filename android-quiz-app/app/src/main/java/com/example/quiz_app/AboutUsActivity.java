@@ -6,9 +6,14 @@ import android.view.WindowManager;
 
 /**
  *
- * @author Shannon
- * @author Udana
+ * @author Shannon (IT16036758)
+ * @author Udana    (IT16069282)
+ * CTSE final project SE4010
+ *
+ * AboutUsActivity.java
+ * This class handles the logic for About Us screen
  */
+
 public class AboutUsActivity extends AppCompatActivity {
 
     @Override
