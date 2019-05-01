@@ -8,6 +8,16 @@ import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+/**
+ *
+ * @author Shannon (IT16036758)
+ * @author Udana    (IT16069282)
+ * CTSE final project SE4010
+ *
+ * ProfileActivity.java
+ * This class handles the logic for Admin profile
+ */
+
 public class ProfileActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;

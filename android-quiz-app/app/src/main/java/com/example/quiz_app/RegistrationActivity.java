@@ -15,6 +15,16 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+/**
+ *
+ * @author Shannon (IT16036758)
+ * @author Udana    (IT16069282)
+ * CTSE final project SE4010
+ *
+ * RegisterationActivity.java
+ * This class handles the logic for Registeration
+ */
+
 public class RegistrationActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;

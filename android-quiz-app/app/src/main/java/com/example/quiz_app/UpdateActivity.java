@@ -17,6 +17,16 @@ import com.example.quiz_app.Model.Question;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+/**
+ *
+ * @author Shannon (IT16036758)
+ * @author Udana    (IT16069282)
+ * CTSE final project SE4010
+ *
+ * UpdateActivity.java
+ * This class handles the logic to update a Question
+ */
+
 public class UpdateActivity extends AppCompatActivity {
 
     String question, one, two, three, four, answer, key;

@@ -17,6 +17,15 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+/**
+ *
+ * @author Shannon (IT16036758)
+ * @author Udana    (IT16069282)
+ * CTSE final project SE4010
+ *
+ * LoginActivity.java
+ * This class handles the logic for administrator Login
+ */
 
 public class LoginActivity extends AppCompatActivity {
 

@@ -29,6 +29,16 @@ import java.util.List;
 
 import static com.example.quiz_app.R.layout.question_row;
 
+/**
+ *
+ * @author Shannon (IT16036758)
+ * @author Udana    (IT16069282)
+ * CTSE final project SE4010
+ *
+ * AdminQuestionList.java
+ * This class handles the logic for the list view of questions
+ */
+
 public class AdminQuestionList extends AppCompatActivity {
 
     ListView listView;

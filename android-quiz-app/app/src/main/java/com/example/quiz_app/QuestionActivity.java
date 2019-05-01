@@ -1,5 +1,4 @@
 package com.example.quiz_app;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.CountDownTimer;
@@ -26,6 +25,16 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
+
+/**
+ *
+ * @author Shannon (IT16036758)
+ * @author Udana    (IT16069282)
+ * CTSE final project SE4010
+ *
+ * QuestionActivity.java
+ * This class handles the main app logic for the quiz game
+ */
 
 public class QuestionActivity extends AppCompatActivity {
 

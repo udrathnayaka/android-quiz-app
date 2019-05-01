@@ -15,6 +15,16 @@ import android.widget.TextView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+/**
+ *
+ * @author Shannon (IT16036758)
+ * @author Udana    (IT16069282)
+ * CTSE final project SE4010
+ *
+ * AdminQuestion.java
+ * This class handles the logic to view a Question clicked on list view
+ */
+
 public class AdminQuestion extends AppCompatActivity {
 
     DatabaseReference ref;

@@ -11,6 +11,16 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+/**
+ *
+ * @author Shannon (IT16036758)
+ * @author Udana    (IT16069282)
+ * CTSE final project SE4010
+ *
+ * DashboardActivity.java
+ * This class handles the logic for the dashboard Screen
+ */
+
 public class DashboardActivity extends AppCompatActivity {
 
     ImageView imageAdmin;
