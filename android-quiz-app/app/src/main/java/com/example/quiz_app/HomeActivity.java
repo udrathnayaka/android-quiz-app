@@ -39,7 +39,9 @@ public class HomeActivity extends AppCompatActivity {
         buttonInstructions = findViewById(R.id.btnStartInstructions);
         buttonDashboard=findViewById(R.id.btnDashboard);
 
+
         //start quiz button code
+        //onClicklisteners for buttons
         buttonStartQuiz.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
@@ -67,11 +69,13 @@ public class HomeActivity extends AppCompatActivity {
         });
     }
 
+    //onBackPressed method
     @Override
     public void onBackPressed() {
         finish();
     }
 
+    //onDestroy method
     @Override
     protected void onDestroy() {
         super.onDestroy();

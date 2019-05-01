@@ -14,6 +14,7 @@ import android.view.WindowManager;
  *
  * MainActivity.java
  * This class handles the initial app logic including splash screen
+ *Main Activity and the Splash Screen
  */
 
 public class MainActivity extends AppCompatActivity {
