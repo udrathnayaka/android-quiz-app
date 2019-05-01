@@ -1,5 +1,10 @@
 package com.example.quiz_app;
 
+/*
+* HomeActivity of the app
+*
+* */
+
 import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -29,6 +34,7 @@ public class HomeActivity extends AppCompatActivity {
         buttonInstructions = findViewById(R.id.btnStartInstructions);
         buttonDashboard=findViewById(R.id.btnDashboard);
 
+        //onClicklisteners for buttons
         buttonStartQuiz.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
@@ -54,11 +60,13 @@ public class HomeActivity extends AppCompatActivity {
         });
     }
 
+    //onBackPressed method
     @Override
     public void onBackPressed() {
         finish();
     }
 
+    //onDestroy method
     @Override
     protected void onDestroy() {
         super.onDestroy();

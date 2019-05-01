@@ -1,5 +1,11 @@
 package com.example.quiz_app;
 
+/*
+* Main Activity and the Splash Screen
+*
+*
+* */
+
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
