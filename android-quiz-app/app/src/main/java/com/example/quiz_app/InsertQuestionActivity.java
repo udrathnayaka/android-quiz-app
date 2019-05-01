@@ -25,6 +25,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+/**
+ *
+ * @author Shannon
+ * @author Udana
+ */
+
 public class InsertQuestionActivity extends AppCompatActivity {
 
     Button btnInsert;

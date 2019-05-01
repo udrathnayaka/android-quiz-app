@@ -15,6 +15,12 @@ import android.widget.TextView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+/**
+ *
+ * @author Shannon
+ * @author Udana
+ */
+
 public class AdminQuestion extends AppCompatActivity {
 
     DatabaseReference ref;

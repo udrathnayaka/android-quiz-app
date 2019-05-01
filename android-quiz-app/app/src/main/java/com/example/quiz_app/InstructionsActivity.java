@@ -4,6 +4,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.WindowManager;
 
+/**
+ *
+ * @author Shannon
+ * @author Udana
+ */
+
 public class InstructionsActivity extends AppCompatActivity {
 
     @Override

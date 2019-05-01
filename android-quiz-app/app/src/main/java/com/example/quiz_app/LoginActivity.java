@@ -17,6 +17,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+/**
+ *
+ * @author Shannon
+ * @author Udana
+ */
 
 public class LoginActivity extends AppCompatActivity {
 

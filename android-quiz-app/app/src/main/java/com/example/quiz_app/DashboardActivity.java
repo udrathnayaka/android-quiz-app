@@ -11,6 +11,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+/**
+ *
+ * @author Shannon
+ * @author Udana
+ */
+
 public class DashboardActivity extends AppCompatActivity {
 
     ImageView imageAdmin;

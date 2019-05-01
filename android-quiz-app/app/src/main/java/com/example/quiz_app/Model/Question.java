@@ -1,5 +1,11 @@
 package com.example.quiz_app.Model;
 
+/**
+ *
+ * @author Shannon
+ * @author Udana
+ */
+
 public class Question {
 
     public String question,option1,option2,option3,option4,answer;

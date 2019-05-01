@@ -7,6 +7,12 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
+/**
+ *
+ * @author Shannon
+ * @author Udana
+ */
+
 public class AdministratorActivity extends AppCompatActivity {
 
     @Override

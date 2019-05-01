@@ -12,6 +12,12 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
+/**
+ *
+ * @author Shannon
+ * @author Udana
+ */
+
 public class HomeActivity extends AppCompatActivity {
 
     Button buttonStartQuiz;

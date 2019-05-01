@@ -29,6 +29,12 @@ import java.util.List;
 
 import static com.example.quiz_app.R.layout.question_row;
 
+/**
+ *
+ * @author Shannon
+ * @author Udana
+ */
+
 public class AdminQuestionList extends AppCompatActivity {
 
     ListView listView;

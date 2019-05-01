@@ -17,6 +17,12 @@ import com.example.quiz_app.Model.Question;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+/**
+ *
+ * @author Shannon
+ * @author Udana
+ */
+
 public class UpdateActivity extends AppCompatActivity {
 
     String question, one, two, three, four, answer, key;

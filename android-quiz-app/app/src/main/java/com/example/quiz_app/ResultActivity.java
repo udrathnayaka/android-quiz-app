@@ -9,6 +9,12 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ *
+ * @author Shannon
+ * @author Udana
+ */
+
 public class ResultActivity extends AppCompatActivity {
 
     TextView t1,t2,t3;
@@ -37,13 +43,13 @@ public class ResultActivity extends AppCompatActivity {
 
         Intent i = getIntent();
 
-            String questions= i.getStringExtra("Total");
-            String correct =i.getStringExtra("Correct");
-            String wrong = i.getStringExtra("Incorrect");
+        String questions= i.getStringExtra("Total");
+        String correct =i.getStringExtra("Correct");
+        String wrong = i.getStringExtra("Incorrect");
 
-            t1.setText(questions);
-            t2.setText(correct);
-            t3.setText(wrong);
+        t1.setText(questions);
+        t2.setText(correct);
+        t3.setText(wrong);
     }
 
     @Override
@@ -54,4 +60,3 @@ public class ResultActivity extends AppCompatActivity {
         finish();
     }
 }
-
